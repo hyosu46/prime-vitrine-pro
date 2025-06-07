@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Play, Star, TrendingUp, Users } from "lucide-react";
+import { Play, TrendingUp, Users, CheckCircle } from "lucide-react";
 import Logo from "./Logo";
 
 const HeroSection = () => {
@@ -10,8 +10,13 @@ const HeroSection = () => {
   };
 
   const handleVideoClick = () => {
-    // Placeholder para quando o vídeo for adicionado
     console.log("Video clicked - replace with actual video");
+  };
+
+  const handleWhatsAppClick = () => {
+    const message = "Oi! Quero meu site profissional da perfil.store 🚀";
+    const whatsappUrl = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -24,33 +29,39 @@ const HeroSection = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left space-y-6 animate-fade-in">
-            {/* Badge de social proof */}
-            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 text-sm">
-              <Users size={16} className="text-primary" />
-              <span className="text-primary font-medium">+2.500 profissionais já transformaram sua presença online</span>
-            </div>
-
+            {/* Headline com tensão emocional */}
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              Tenha um{" "}
-              <span className="gradient-text">site profissional</span>{" "}
-              que faz você parecer <span className="text-primary">grande</span>
+              Você parece{" "}
+              <span className="text-red-400">pequeno demais</span>{" "}
+              pra ser levado a sério?
             </h1>
             
+            {/* Subheadline com promessa reversa */}
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Sua <span className="text-primary font-semibold">página profissional</span> com 
-              agendamento automático e design que impressiona,{" "}
-              <span className="text-foreground font-semibold">sem mensalidades.</span>
+              📱 Um <span className="text-primary font-semibold">site profissional</span> que faz você parecer <span className="text-foreground font-semibold">grande</span>, atrair mais clientes e fechar sem esforço.
+              <br />
+              <span className="text-foreground font-semibold">Sem mensalidade. Entregue em até 72h.</span>
             </p>
 
-            {/* Estatísticas rápidas */}
+            {/* Badge de social proof melhorado */}
+            <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 text-sm">
+              <Users size={16} className="text-primary" />
+              <span className="text-primary font-medium">🔒 +2.500 profissionais já saíram do amadorismo com a perfil.store</span>
+            </div>
+
+            {/* Benefícios rápidos */}
             <div className="flex flex-wrap gap-6 pt-4">
               <div className="flex items-center space-x-2">
-                <TrendingUp className="text-accent" size={20} />
-                <span className="text-sm font-medium">87% mais agendamentos</span>
+                <CheckCircle className="text-accent" size={20} />
+                <span className="text-sm font-medium">Agendamentos 24h</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Star className="text-accent" size={20} />
-                <span className="text-sm font-medium">4.9/5 satisfação</span>
+                <CheckCircle className="text-accent" size={20} />
+                <span className="text-sm font-medium">Visual Premium</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="text-accent" size={20} />
+                <span className="text-sm font-medium">Pronto em até 3 dias</span>
               </div>
             </div>
 
@@ -58,28 +69,34 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold text-lg px-8 py-6 tech-glow"
-                onClick={scrollToAction}
+                onClick={handleWhatsAppClick}
               >
-                Quero meu site profissional
+                Quero meu site agora
               </Button>
               <Button 
                 variant="outline" 
                 size="lg" 
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold text-lg px-8 py-6"
-                onClick={scrollToAction}
+                onClick={handleVideoClick}
               >
-                Ver exemplos reais
+                Ver transformações reais
               </Button>
             </div>
 
-            <div className="pt-4 text-sm text-muted-foreground">
-              ✅ Entrega em até 3 dias • ✅ Sem mensalidade • ✅ Design que impressiona
+            {/* Estatística que mata dúvida */}
+            <div className="pt-6 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-xl p-4">
+              <p className="text-lg font-semibold text-center">
+                <span className="text-primary">87%</span> dos nossos clientes aumentaram seus agendamentos na primeira semana.
+              </p>
+              <p className="text-muted-foreground text-center mt-1">
+                💬 E 1 em cada 3 pagou o investimento em menos de 15 dias.
+              </p>
             </div>
           </div>
 
           <div className="flex justify-center lg:justify-end">
             <div className="space-y-6">
-              {/* Placeholder para vídeo de exemplo */}
+              {/* Vídeo de contraste ANTES x DEPOIS */}
               <div 
                 className="video-placeholder cursor-pointer group"
                 onClick={handleVideoClick}
@@ -89,8 +106,8 @@ const HeroSection = () => {
                     <Play className="text-primary-foreground ml-1" size={24} />
                   </div>
                   <div>
-                    <p className="font-semibold text-lg">Veja exemplos reais</p>
-                    <p className="text-muted-foreground">Como nossos clientes ficaram após ter um site profissional</p>
+                    <p className="font-semibold text-lg">ANTES x DEPOIS</p>
+                    <p className="text-muted-foreground">Veja a transformação completa</p>
                   </div>
                 </div>
               </div>

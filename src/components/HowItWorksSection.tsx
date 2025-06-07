@@ -1,37 +1,37 @@
 
-import { Palette, Send, Zap, CheckCircle, Users, Rocket } from "lucide-react";
+import { Palette, Send, Zap, CheckCircle, Shield, Rocket } from "lucide-react";
 
 const steps = [
   {
     icon: Palette,
-    number: "01",
+    number: "1️⃣",
     title: "Você escolhe o estilo",
-    description: "Seleciona o design que mais combina com seu perfil profissional"
+    description: "Seleciona o design que combina com seu perfil profissional"
   },
   {
     icon: Send,
-    number: "02",
-    title: "Enviamos os dados",
-    description: "Passa suas informações, fotos e conteúdo que quer incluir"
+    number: "2️⃣",
+    title: "Envia suas informações",
+    description: "Passa dados, fotos e conteúdo que quer incluir"
   },
   {
     icon: Zap,
-    number: "03",
-    title: "Pronto em até 72h",
-    description: "Seu site profissional fica lindo e funcionando perfeitamente"
+    number: "3️⃣",
+    title: "Em até 3 dias seu site está no ar",
+    description: "Pronto pra converter e impressionar"
   }
 ];
 
 const HowItWorksSection = () => {
   return (
-    <section id="como-funciona" className="py-20 px-4 bg-card">
+    <section id="como-funciona" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Como funciona?
+            COMO FUNCIONA <span className="gradient-text">(PASSO A PASSO VISUAL)</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Simples e rápido. Em 3 passos você tem sua presença digital profissional
+            Simples, rápido e sem complicação
           </p>
         </div>
 
@@ -61,10 +61,10 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        {/* Espaço para vídeo do processo */}
+        {/* Vídeo do processo */}
         <div className="mt-20">
           <h3 className="text-2xl md:text-3xl font-bold text-center mb-8">
-            Veja o processo completo
+            Veja todo o processo
           </h3>
           <div className="video-placeholder max-w-4xl mx-auto">
             <div className="text-center space-y-4">
@@ -72,19 +72,26 @@ const HowItWorksSection = () => {
                 <Rocket className="text-primary-foreground" size={24} />
               </div>
               <div>
-                <p className="font-semibold text-lg">Processo completo</p>
-                <p className="text-muted-foreground">Veja como criamos seu site profissional do zero</p>
+                <p className="font-semibold text-lg">Do zero ao ar</p>
+                <p className="text-muted-foreground">Como criamos seu site profissional</p>
               </div>
             </div>
           </div>
         </div>
 
+        {/* Garantia de poder */}
         <div className="text-center mt-16">
-          <div className="inline-block bg-primary/10 border border-primary/30 rounded-2xl p-6">
-            <div className="flex items-center justify-center space-x-2 mb-2">
-              <CheckCircle className="w-6 h-6 text-primary" />
+          <div className="inline-block bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/30 rounded-2xl p-8">
+            <div className="flex items-center justify-center space-x-3 mb-4">
+              <Shield className="w-8 h-8 text-primary" />
+              <h3 className="text-2xl font-bold">GARANTIA DE PODER</h3>
+            </div>
+            <div className="space-y-2">
               <p className="text-lg font-semibold">
-                <span className="text-primary">Garantia total:</span> Se não ficar satisfeito, devolvemos seu dinheiro!
+                ⚠️ Garantia total: se não gostar, devolvemos seu dinheiro.
+              </p>
+              <p className="text-muted-foreground">
+                Sem risco. Sem enrolação. Só resultado.
               </p>
             </div>
           </div>
