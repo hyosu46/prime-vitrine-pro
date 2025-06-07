@@ -7,44 +7,44 @@
 
 @layer base {
   :root {
-    --background: 10 10% 4%;
-    --foreground: 0 0% 95%;
+    --background: 240 10% 6%;
+    --foreground: 0 0% 98%;
 
-    --card: 10 10% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 10 10% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 142 100% 55%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 265 85% 65%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 10 10% 15%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 10 10% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 240 10% 12%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 190 100% 50%;
+    --accent: 315 100% 70%;
     --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 10 10% 15%;
-    --input: 10 10% 15%;
-    --ring: 142 100% 55%;
+    --border: 240 10% 12%;
+    --input: 240 10% 12%;
+    --ring: 265 85% 65%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 10 10% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 142 100% 55%;
-    --sidebar-primary-foreground: 0 0% 0%;
-    --sidebar-accent: 10 10% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 10 10% 15%;
-    --sidebar-ring: 142 100% 55%;
+    --sidebar-background: 240 10% 8%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 265 85% 65%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 10% 12%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 240 10% 12%;
+    --sidebar-ring: 265 85% 65%;
   }
 }
 
@@ -64,14 +64,18 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-tech-green to-tech-blue bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
   .tech-glow {
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-tech-green/20;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20;
+  }
+
+  .video-placeholder {
+    @apply bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-dashed border-primary/30 rounded-xl flex items-center justify-center min-h-[200px] text-center p-6;
   }
 }
