@@ -49,26 +49,26 @@ const BenefitsSection = () => {
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Por que escolher a <span className="gradient-text">perfil.store</span>?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Porque você merece ter o mesmo nível profissional dos grandes, sem pagar como eles
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-2xl p-6 card-hover text-center animate-fade-in"
+              className="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 card-hover text-center animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
-                <benefit.icon className="w-8 h-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sitigon-500 to-purple-600 rounded-2xl mb-4">
+                <benefit.icon className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{benefit.description}</p>
+              <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
             </div>
           ))}
         </div>
@@ -79,25 +79,25 @@ const BenefitsSection = () => {
             Veja a diferença de ter um site profissional
           </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="video-placeholder">
+            <div className="video-placeholder hover:shadow-lg transition-all duration-300">
               <div className="text-center space-y-4">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500 rounded-full">
                   <Smartphone className="text-white" size={24} />
                 </div>
                 <div>
-                  <p className="font-semibold text-lg text-red-400">ANTES</p>
-                  <p className="text-muted-foreground">Link simples que não converte</p>
+                  <p className="font-semibold text-lg text-red-500">ANTES</p>
+                  <p className="text-gray-600">Link simples que não converte</p>
                 </div>
               </div>
             </div>
-            <div className="video-placeholder">
+            <div className="video-placeholder hover:shadow-lg transition-all duration-300">
               <div className="text-center space-y-4">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary rounded-full">
-                  <TrendingUp className="text-primary-foreground" size={24} />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-sitigon-500 to-purple-600 rounded-full">
+                  <TrendingUp className="text-white" size={24} />
                 </div>
                 <div>
-                  <p className="font-semibold text-lg text-primary">DEPOIS</p>
-                  <p className="text-muted-foreground">Site profissional que impressiona</p>
+                  <p className="font-semibold text-lg gradient-text">DEPOIS</p>
+                  <p className="text-gray-600">Site profissional que impressiona</p>
                 </div>
               </div>
             </div>

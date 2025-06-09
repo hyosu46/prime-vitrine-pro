@@ -24,7 +24,7 @@ const Logo = ({ size = "default" }: { size?: "small" | "default" | "large" }) =>
     <div className="flex items-center space-x-3">
       <div className={`${sizeClasses[size]} relative`}>
         {/* Background circle with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary to-accent rounded-2xl opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-sitigon-500 to-purple-600 rounded-2xl opacity-90"></div>
         
         {/* Main icon */}
         <div className="relative flex items-center justify-center w-full h-full">
@@ -33,7 +33,7 @@ const Logo = ({ size = "default" }: { size?: "small" | "default" | "large" }) =>
         
         {/* Floating sparkle */}
         <div className="absolute -top-1 -right-1">
-          <Sparkles className="text-accent animate-float" size={iconSize[size] * 0.4} />
+          <Sparkles className="text-purple-500 animate-float" size={iconSize[size] * 0.4} />
         </div>
       </div>
       
