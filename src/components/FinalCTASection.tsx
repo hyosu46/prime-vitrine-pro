@@ -10,52 +10,51 @@ const FinalCTASection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-20 px-4 section-gradient">
+    <section className="py-20 px-4 section-gradient">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
-          <AlertTriangle className="w-12 h-12 sm:w-16 sm:h-16 text-red-400 mx-auto mb-4 animate-float" />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-elegant-text">
+          <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
             PARE DE PARECER PEQUENO.
           </h2>
-          <p className="text-lg sm:text-xl text-elegant-text/80 mb-4">
+          <p className="text-xl text-gray-600 mb-4">
             Sua concorrência já tem um site profissional.
           </p>
-          <p className="text-xl sm:text-2xl font-bold text-red-400 mb-8">
+          <p className="text-2xl font-bold text-red-500 mb-8">
             Você vai continuar sendo só "mais um link no WhatsApp"?
           </p>
         </div>
 
-        <div className="elegant-card rounded-2xl p-6 sm:p-8 mb-8">
+        <div className="bg-gradient-to-r from-sitigon-50 to-purple-50 border border-sitigon-200 rounded-2xl p-8 mb-8">
           <div className="space-y-6 mb-8">
-            <p className="text-xl sm:text-2xl font-bold text-elegant-text">
+            <p className="text-2xl font-bold">
               💥 Escolha parecer grande agora.
             </p>
-            <p className="text-lg sm:text-xl text-elegant-text/80">
+            <p className="text-xl">
               💬 Clique abaixo e comece ainda hoje.
             </p>
           </div>
 
           <Button 
             size="lg" 
-            className="elegant-button text-white font-bold text-lg sm:text-xl px-8 sm:px-12 py-4 sm:py-6 tech-glow mb-6 transition-all duration-300 w-full sm:w-auto"
+            className="bg-gradient-to-r from-sitigon-500 to-purple-600 hover:from-sitigon-600 hover:to-purple-700 text-white font-bold text-xl px-12 py-6 tech-glow mb-6 transition-all duration-300"
             onClick={handleWhatsAppClick}
           >
-            <span className="hidden sm:inline">Quero meu site profissional agora</span>
-            <span className="sm:hidden">Quero meu site agora</span>
-            <ArrowRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6" />
+            Quero meu site profissional agora
+            <ArrowRight className="ml-2 w-6 h-6" />
           </Button>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-            <div className="flex items-center justify-center space-x-2 text-elegant-text/70">
-              <Shield className="w-5 h-5 text-cyan-400" />
+          <div className="grid md:grid-cols-3 gap-4 text-sm">
+            <div className="flex items-center justify-center space-x-2">
+              <Shield className="w-5 h-5 text-sitigon-600" />
               <span>🔒 Seus dados estão seguros</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-elegant-text/70">
-              <Clock className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center justify-center space-x-2">
+              <Clock className="w-5 h-5 text-sitigon-600" />
               <span>⏱️ Entrega em até 72h</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 text-elegant-text/70">
-              <Zap className="w-5 h-5 text-cyan-400" />
+            <div className="flex items-center justify-center space-x-2">
+              <Zap className="w-5 h-5 text-sitigon-600" />
               <span>📞 Suporte rápido no WhatsApp</span>
             </div>
           </div>

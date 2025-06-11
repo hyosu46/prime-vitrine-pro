@@ -89,14 +89,6 @@ export default {
 					'700': '#7c3aed',
 					'800': '#6b21a8',
 					'900': '#581c87',
-				},
-				elegant: {
-					'dark-1': 'hsl(var(--dark-elegant-1))',
-					'dark-2': 'hsl(var(--dark-elegant-2))',
-					'dark-3': 'hsl(var(--dark-elegant-3))',
-					'cyan': 'hsl(var(--accent-cyan))',
-					'text': 'hsl(var(--text-elegant))',
-					'surface': 'hsl(var(--surface-elegant))',
 				}
 			},
 			borderRadius: {
@@ -133,10 +125,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 5px #00f5d4, 0 0 10px #00f5d4, 0 0 15px #00f5d4'
+						boxShadow: '0 0 5px #0ea5e9, 0 0 10px #0ea5e9, 0 0 15px #0ea5e9'
 					},
 					'50%': {
-						boxShadow: '0 0 10px #00f5d4, 0 0 20px #00f5d4, 0 0 30px #00f5d4'
+						boxShadow: '0 0 10px #0ea5e9, 0 0 20px #0ea5e9, 0 0 30px #0ea5e9'
 					}
 				},
 				'float': {

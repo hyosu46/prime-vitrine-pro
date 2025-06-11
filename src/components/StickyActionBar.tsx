@@ -26,17 +26,16 @@ const StickyActionBar = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 elegant-card border-t border-cyan-400/20 p-3 sm:p-4 animate-fade-in">
-      <div className="max-w-sm mx-auto px-2">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-gray-200 p-4 animate-fade-in">
+      <div className="max-w-sm mx-auto">
         <Button 
           onClick={handleWhatsAppClick}
-          className="w-full elegant-button text-white font-bold text-sm sm:text-lg py-3 sm:py-4 px-4 sm:px-6 tech-glow transition-all duration-300 whitespace-nowrap overflow-hidden text-ellipsis"
+          className="w-full bg-gradient-to-r from-sitigon-500 to-purple-600 hover:from-sitigon-600 hover:to-purple-700 text-white font-bold text-lg py-4 tech-glow transition-all duration-300"
         >
-          <span className="hidden sm:inline">Quero meu site profissional</span>
-          <span className="sm:hidden">Quero meu site</span>
-          <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
+          Quero meu site profissional
+          <ArrowRight className="ml-2 w-5 h-5" />
         </Button>
-        <p className="text-xs text-center text-elegant-text/70 mt-2">
+        <p className="text-xs text-center text-gray-600 mt-2">
           💬 Resposta rápida via WhatsApp
         </p>
       </div>
