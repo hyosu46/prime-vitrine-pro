@@ -3,49 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Perfil Beacon Design System - Variáveis Globais */
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
 
 @layer base {
   :root {
-    --background: 8 12 20; /* Mais escuro para o novo gradiente */
-    --foreground: 224 225 221; /* #e0e1dd */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 15 25 35 / 0.8; /* Mais transparente */
-    --card-foreground: 224 225 221; /* #e0e1dd */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 15 25 35; /* Mais escuro */
-    --popover-foreground: 224 225 221; /* #e0e1dd */
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 0 245 212; /* #00f5d4 */
-    --primary-foreground: 8 12 20; /* Fundo escuro */
+    --primary: 206 85% 57%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 15 25 35; /* Mais escuro */
-    --secondary-foreground: 224 225 221; /* #e0e1dd */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 15 25 35 / 0.6;
-    --muted-foreground: 224 225 221 / 0.8;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 0 245 212; /* #00f5d4 */
-    --accent-foreground: 8 12 20; /* Fundo escuro */
+    --accent: 271 81% 56%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 239 68 68; /* #ef4444 */
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 245 212 / 0.15; /* Mais sutil */
-    --input: 15 25 35; /* Mais escuro */
-    --ring: 0 245 212; /* #00f5d4 */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 206 85% 57%;
 
     --radius: 0.75rem;
 
-    /* Variáveis Globais Beacon Atualizadas */
-    --dark-bg-1: 8 12 20; /* Base mais escura */
-    --dark-bg-2: 15 25 35; /* Topo mais escuro */
-    --dark-bg-3: 20 15 35; /* Novo tom roxo escuro */
-    --accent-primary: 0 245 212; /* #00f5d4 */
-    --text-light: 224 225 221; /* #e0e1dd */
-    --text-title: 255 255 255; /* #FFFFFF */
-    --surface-1: 15 25 35 / 0.8; /* Mais transparente */
-    --border-color: 0 245 212 / 0.15; /* Mais sutil */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 206 85% 57%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 240 5.9% 90%;
+    --sidebar-ring: 206 85% 57%;
   }
 }
 
@@ -55,11 +54,7 @@
   }
 
   body {
-    @apply text-foreground font-manrope;
-    /* Novo gradiente sofisticado com múltiplas paradas */
-    background: radial-gradient(ellipse at top, hsl(220 25% 8%) 0%, hsl(210 40% 6%) 25%, hsl(250 30% 4%) 50%, hsl(220 25% 3%) 75%, hsl(0 0% 0%) 100%);
-    background-attachment: fixed;
-    min-height: 100vh;
+    @apply bg-background text-foreground font-inter;
   }
 
   html {
@@ -69,127 +64,26 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sitigon-600 to-purple-600 bg-clip-text text-transparent;
   }
 
-  .beacon-glow {
-    box-shadow: 0 0 40px rgba(0, 245, 212, 0.4), 0 0 80px rgba(0, 245, 212, 0.2);
+  .tech-glow {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
   }
 
   .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:-translate-y-2;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2;
   }
 
-  .surface-card {
-    background: rgba(15, 25, 35, 0.8);
-    border: 1px solid rgba(0, 245, 212, 0.15);
-    backdrop-filter: blur(20px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  .video-placeholder {
+    @apply bg-gradient-to-br from-sitigon-50 to-purple-50 border-2 border-dashed border-sitigon-300 rounded-xl flex items-center justify-center min-h-[200px] text-center p-6;
   }
 
-  .typing-indicator {
-    @apply inline-flex space-x-1;
+  .section-gradient {
+    @apply bg-gradient-to-b from-white to-gray-50;
   }
 
-  .typing-dot {
-    @apply w-2 h-2 bg-primary rounded-full animate-pulse;
-    animation-delay: calc(var(--delay) * 0.2s);
-  }
-
-  .oracle-box {
-    @apply surface-card rounded-xl p-6 md:p-10 font-mono;
-    box-shadow: 0 0 60px rgba(0, 245, 212, 0.1);
-  }
-
-  .container-beacon {
-    @apply max-w-[1150px] mx-auto px-4 md:px-6;
-  }
-
-  .section-spacing {
-    @apply py-16 md:py-24 lg:py-36;
-  }
-
-  /* Otimizações para mobile */
-  .mobile-optimized {
-    @apply text-sm md:text-base lg:text-lg;
-  }
-
-  .mobile-title {
-    @apply text-3xl md:text-5xl lg:text-6xl xl:text-7xl;
-  }
-
-  .mobile-subtitle {
-    @apply text-lg md:text-xl lg:text-2xl;
-  }
-
-  .mobile-padding {
-    @apply p-4 md:p-6 lg:p-8;
-  }
-
-  .mobile-spacing {
-    @apply space-y-4 md:space-y-6 lg:space-y-8;
-  }
-}
-
-/* Animações personalizadas otimizadas */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes progressFill {
-  from { width: 0%; }
-  to { width: 23%; }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scaleIn 0.5s ease-out forwards;
-}
-
-.animate-progress {
-  animation: progressFill 1s ease-out forwards;
-}
-
-/* Delays para coreografia */
-.delay-150 { animation-delay: 150ms; }
-.delay-300 { animation-delay: 300ms; }
-.delay-400 { animation-delay: 400ms; }
-.delay-800 { animation-delay: 800ms; }
-.delay-2300 { animation-delay: 2300ms; }
-.delay-2500 { animation-delay: 2500ms; }
-
-/* Responsividade melhorada */
-@media (max-width: 768px) {
-  .container-beacon {
-    @apply px-4;
-  }
-  
-  .section-spacing {
-    @apply py-12;
-  }
-  
-  .oracle-box {
-    @apply p-4 text-sm;
+  .section-special {
+    @apply bg-gradient-to-br from-sitigon-50 to-purple-50;
   }
 }
