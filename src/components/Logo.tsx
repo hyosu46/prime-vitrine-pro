@@ -1,27 +1,25 @@
-
 import { Globe, Sparkles } from "lucide-react";
-
-const Logo = ({ size = "default" }: { size?: "small" | "default" | "large" }) => {
+const Logo = ({
+  size = "default"
+}: {
+  size?: "small" | "default" | "large";
+}) => {
   const sizeClasses = {
     small: "w-8 h-8",
     default: "w-12 h-12",
     large: "w-16 h-16"
   };
-
   const iconSize = {
     small: 16,
     default: 24,
     large: 32
   };
-
   const textSize = {
     small: "text-lg",
     default: "text-2xl",
     large: "text-4xl"
   };
-
-  return (
-    <div className="flex items-center space-x-3">
+  return <div className="flex items-center space-x-3">
       <div className={`${sizeClasses[size]} relative`}>
         {/* Background circle with gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-sitigon-500 to-purple-600 rounded-2xl opacity-90"></div>
@@ -38,11 +36,9 @@ const Logo = ({ size = "default" }: { size?: "small" | "default" | "large" }) =>
       </div>
       
       <div className={`font-bold ${textSize[size]}`}>
-        <span className="gradient-text">perfil</span>
-        <span className="text-foreground">.store</span>
+        <span className="gradient-text">Perfil</span>
+        <span className="text-foreground">.online</span>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Logo;
