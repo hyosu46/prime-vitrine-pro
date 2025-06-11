@@ -3,48 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
+/* Perfil Beacon Design System - Variáveis Globais */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 13 27 42; /* #0d1b2a */
+    --foreground: 224 225 221; /* #e0e1dd */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 27 38 59 / 0.7; /* rgba(27, 38, 59, 0.7) */
+    --card-foreground: 224 225 221; /* #e0e1dd */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 27 38 59; /* #1b263b */
+    --popover-foreground: 224 225 221; /* #e0e1dd */
 
-    --primary: 206 85% 57%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 0 245 212; /* #00f5d4 */
+    --primary-foreground: 13 27 42; /* #0d1b2a */
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 27 38 59; /* #1b263b */
+    --secondary-foreground: 224 225 221; /* #e0e1dd */
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 27 38 59 / 0.5;
+    --muted-foreground: 224 225 221 / 0.7;
 
-    --accent: 271 81% 56%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 245 212; /* #00f5d4 */
+    --accent-foreground: 13 27 42; /* #0d1b2a */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 255 92 92; /* #FF5C5C */
+    --destructive-foreground: 255 255 255;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 206 85% 57%;
+    --border: 0 245 212 / 0.2; /* rgba(0, 245, 212, 0.2) */
+    --input: 27 38 59; /* #1b263b */
+    --ring: 0 245 212; /* #00f5d4 */
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 206 85% 57%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 240 5.9% 90%;
-    --sidebar-ring: 206 85% 57%;
+    /* Variáveis Globais Beacon */
+    --dark-bg-1: 13 27 42; /* #0d1b2a */
+    --dark-bg-2: 27 38 59; /* #1b263b */
+    --accent-primary: 0 245 212; /* #00f5d4 */
+    --text-light: 224 225 221; /* #e0e1dd */
+    --text-title: 255 255 255; /* #FFFFFF */
+    --surface-1: 27 38 59 / 0.7; /* rgba(27, 38, 59, 0.7) */
+    --border-color: 0 245 212 / 0.2; /* rgba(0, 245, 212, 0.2) */
   }
 }
 
@@ -54,7 +54,9 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply text-foreground font-manrope;
+    background: linear-gradient(135deg, hsl(var(--dark-bg-1)) 0%, hsl(var(--dark-bg-2)) 100%);
+    min-height: 100vh;
   }
 
   html {
@@ -64,26 +66,89 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-sitigon-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
   }
 
-  .tech-glow {
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+  .beacon-glow {
+    box-shadow: 0 0 30px rgba(0, 245, 212, 0.3);
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:-translate-y-2;
   }
 
-  .video-placeholder {
-    @apply bg-gradient-to-br from-sitigon-50 to-purple-50 border-2 border-dashed border-sitigon-300 rounded-xl flex items-center justify-center min-h-[200px] text-center p-6;
+  .surface-card {
+    background: rgba(27, 38, 59, 0.7);
+    border: 1px solid rgba(0, 245, 212, 0.2);
+    backdrop-filter: blur(10px);
   }
 
-  .section-gradient {
-    @apply bg-gradient-to-b from-white to-gray-50;
+  .typing-indicator {
+    @apply inline-flex space-x-1;
   }
 
-  .section-special {
-    @apply bg-gradient-to-br from-sitigon-50 to-purple-50;
+  .typing-dot {
+    @apply w-2 h-2 bg-primary rounded-full animate-pulse;
+    animation-delay: calc(var(--delay) * 0.2s);
+  }
+
+  .oracle-box {
+    @apply surface-card rounded-xl p-10 font-mono;
+  }
+
+  .container-beacon {
+    @apply max-w-[1150px] mx-auto px-6;
+  }
+
+  .section-spacing {
+    @apply py-36;
   }
 }
+
+/* Animações personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes progressFill {
+  from { width: 0%; }
+  to { width: 23%; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-progress {
+  animation: progressFill 1s ease-out forwards;
+}
+
+/* Delays para coreografia */
+.delay-150 { animation-delay: 150ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-800 { animation-delay: 800ms; }
+.delay-2300 { animation-delay: 2300ms; }
+.delay-2500 { animation-delay: 2500ms; }
