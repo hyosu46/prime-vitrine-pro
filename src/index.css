@@ -45,6 +45,14 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 240 5.9% 90%;
     --sidebar-ring: 206 85% 57%;
+
+    /* Cores customizadas para o gradiente elegante */
+    --dark-elegant-1: 0 0% 4%;           /* Preto profundo */
+    --dark-elegant-2: 191 47% 8%;        /* Azul-petróleo escuro */
+    --dark-elegant-3: 260 20% 12%;       /* Roxo escuro */
+    --accent-cyan: 174 100% 48%;         /* Ciano vibrante para destaques */
+    --text-elegant: 0 0% 88%;            /* Texto claro elegante */
+    --surface-elegant: 260 20% 12%;      /* Superfície com transparência */
   }
 }
 
@@ -54,7 +62,14 @@
   }
 
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply font-inter text-foreground;
+    background: radial-gradient(ellipse at center, 
+      hsl(var(--dark-elegant-3)) 0%,
+      hsl(var(--dark-elegant-2)) 35%,
+      hsl(var(--dark-elegant-1)) 100%
+    );
+    min-height: 100vh;
+    color: hsl(var(--text-elegant));
   }
 
   html {
@@ -64,11 +79,11 @@
 
 @layer components {
   .gradient-text {
-    @apply bg-gradient-to-r from-sitigon-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent;
   }
 
   .tech-glow {
-    box-shadow: 0 0 20px rgba(14, 165, 233, 0.4);
+    box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
   }
 
   .card-hover {
@@ -76,14 +91,33 @@
   }
 
   .video-placeholder {
-    @apply bg-gradient-to-br from-sitigon-50 to-purple-50 border-2 border-dashed border-sitigon-300 rounded-xl flex items-center justify-center min-h-[200px] text-center p-6;
+    @apply bg-gradient-to-br from-gray-800/50 to-purple-900/30 border-2 border-dashed border-cyan-400/30 rounded-xl flex items-center justify-center min-h-[200px] text-center p-6;
   }
 
   .section-gradient {
-    @apply bg-gradient-to-b from-white to-gray-50;
+    background: rgba(0, 0, 0, 0.2);
   }
 
   .section-special {
-    @apply bg-gradient-to-br from-sitigon-50 to-purple-50;
+    background: linear-gradient(135deg, 
+      rgba(0, 245, 212, 0.05) 0%, 
+      rgba(168, 85, 247, 0.05) 100%
+    );
+  }
+
+  .elegant-card {
+    background: rgba(260, 20%, 12%, 0.3);
+    border: 1px solid rgba(0, 245, 212, 0.2);
+    backdrop-filter: blur(10px);
+  }
+
+  .elegant-button {
+    background: linear-gradient(135deg, #00f5d4 0%, #a855f7 100%);
+    transition: all 0.3s ease;
+  }
+
+  .elegant-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 245, 212, 0.3);
   }
 }
