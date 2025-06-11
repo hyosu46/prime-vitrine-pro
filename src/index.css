@@ -47,12 +47,12 @@
     --sidebar-ring: 206 85% 57%;
 
     /* Cores customizadas para o gradiente elegante */
-    --dark-elegant-1: 0 0% 4%;           /* Preto profundo */
-    --dark-elegant-2: 191 47% 8%;        /* Azul-petróleo escuro */
-    --dark-elegant-3: 260 20% 12%;       /* Roxo escuro */
+    --dark-elegant-1: 0 0% 3%;           /* Preto profundo */
+    --dark-elegant-2: 200 50% 8%;        /* Azul-petróleo escuro */
+    --dark-elegant-3: 260 25% 10%;       /* Roxo escuro */
     --accent-cyan: 174 100% 48%;         /* Ciano vibrante para destaques */
-    --text-elegant: 0 0% 88%;            /* Texto claro elegante */
-    --surface-elegant: 260 20% 12%;      /* Superfície com transparência */
+    --text-elegant: 0 0% 90%;            /* Texto claro elegante */
+    --surface-elegant: 260 25% 12%;      /* Superfície com transparência */
   }
 }
 
@@ -62,7 +62,7 @@
   }
 
   body {
-    @apply font-inter text-foreground;
+    @apply font-inter;
     background: radial-gradient(ellipse at center, 
       hsl(var(--dark-elegant-3)) 0%,
       hsl(var(--dark-elegant-2)) 35%,
@@ -95,19 +95,19 @@
   }
 
   .section-gradient {
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.15);
   }
 
   .section-special {
     background: linear-gradient(135deg, 
-      rgba(0, 245, 212, 0.05) 0%, 
-      rgba(168, 85, 247, 0.05) 100%
+      rgba(0, 245, 212, 0.03) 0%, 
+      rgba(168, 85, 247, 0.03) 100%
     );
   }
 
   .elegant-card {
-    background: rgba(260, 20%, 12%, 0.3);
-    border: 1px solid rgba(0, 245, 212, 0.2);
+    background: rgba(260, 25%, 12%, 0.4);
+    border: 1px solid rgba(0, 245, 212, 0.15);
     backdrop-filter: blur(10px);
   }
 
