@@ -13,8 +13,12 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: '1rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -59,12 +63,13 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				beacon: {
-					'dark-1': '#0d1b2a',
-					'dark-2': '#1b263b',
+					'dark-1': '#080c14',
+					'dark-2': '#0f1923',
+					'dark-3': '#141f23',
 					'accent': '#00f5d4',
 					'text-light': '#e0e1dd',
 					'text-title': '#ffffff',
-					'surface': 'rgba(27, 38, 59, 0.7)',
+					'surface': 'rgba(15, 25, 35, 0.8)',
 				}
 			},
 			borderRadius: {
@@ -92,7 +97,7 @@ export default {
 				'fade-in-up': {
 					'0%': {
 						opacity: '0',
-						transform: 'translateY(30px)'
+						transform: 'translateY(20px)'
 					},
 					'100%': {
 						opacity: '1',
@@ -116,6 +121,14 @@ export default {
 				'pulse-typing': {
 					'0%, 100%': { opacity: '1' },
 					'50%': { opacity: '0.5' }
+				},
+				'glow': {
+					'0%, 100%': { 
+						boxShadow: '0 0 20px rgba(0, 245, 212, 0.3)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 40px rgba(0, 245, 212, 0.6)' 
+					}
 				}
 			},
 			animation: {
@@ -124,8 +137,12 @@ export default {
 				'fade-in-up': 'fade-in-up 0.6s ease-out',
 				'scale-in': 'scale-in 0.5s ease-out',
 				'progress-fill': 'progress-fill 1s ease-out',
-				'pulse-typing': 'pulse-typing 1.5s ease-in-out infinite'
-			}
+				'pulse-typing': 'pulse-typing 1.5s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite'
+			},
+			screens: {
+				'xs': '475px',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
