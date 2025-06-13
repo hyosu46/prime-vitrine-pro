@@ -25,7 +25,7 @@ const FinalCTASection = () => {
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-sitigon-50 to-purple-50 border border-sitigon-200 rounded-2xl p-8 mb-8">
+        <div className="bg-gradient-to-r from-sitigon-50 to-purple-50 border border-sitigon-200 rounded-2xl p-4 sm:p-8 mb-8">
           <div className="space-y-6 mb-8">
             <p className="text-2xl font-bold">
               💥 Escolha parecer grande agora.
@@ -37,24 +37,25 @@ const FinalCTASection = () => {
 
           <Button 
             size="lg" 
-            className="bg-gradient-to-r from-sitigon-500 to-purple-600 hover:from-sitigon-600 hover:to-purple-700 text-white font-bold text-xl px-12 py-6 tech-glow mb-6 transition-all duration-300"
+            className="w-full bg-gradient-to-r from-sitigon-500 to-purple-600 hover:from-sitigon-600 hover:to-purple-700 text-white font-bold text-sm sm:text-lg md:text-xl px-4 sm:px-8 md:px-12 py-4 sm:py-6 tech-glow mb-6 transition-all duration-300"
             onClick={handleWhatsAppClick}
           >
-            Quero meu site profissional agora
-            <ArrowRight className="ml-2 w-6 h-6" />
+            <span className="hidden sm:inline">Quero meu site profissional agora</span>
+            <span className="sm:hidden">Quero meu site agora</span>
+            <ArrowRight className="ml-1 sm:ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 flex-shrink-0" />
           </Button>
 
-          <div className="grid md:grid-cols-3 gap-4 text-sm">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
             <div className="flex items-center justify-center space-x-2">
-              <Shield className="w-5 h-5 text-sitigon-600" />
+              <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-sitigon-600 flex-shrink-0" />
               <span>🔒 Seus dados estão seguros</span>
             </div>
             <div className="flex items-center justify-center space-x-2">
-              <Clock className="w-5 h-5 text-sitigon-600" />
+              <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-sitigon-600 flex-shrink-0" />
               <span>⏱️ Entrega em até 72h</span>
             </div>
             <div className="flex items-center justify-center space-x-2">
-              <Zap className="w-5 h-5 text-sitigon-600" />
+              <Zap className="w-4 h-4 sm:w-5 sm:h-5 text-sitigon-600 flex-shrink-0" />
               <span>📞 Suporte rápido no WhatsApp</span>
             </div>
           </div>
