@@ -37,7 +37,7 @@ const Logo = ({
       
       <div className={`font-bold ${textSize[size]}`}>
         <span className="gradient-text">Perfil</span>
-        <span className="text-foreground">.online</span>
+        <span className="text-foreground">.site</span>
       </div>
     </div>;
 };
