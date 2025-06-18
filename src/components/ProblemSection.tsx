@@ -1,9 +1,6 @@
-
 import { AlertTriangle, Eye, TrendingDown } from "lucide-react";
-
 const ProblemSection = () => {
-  return (
-    <section className="py-20 px-4">
+  return <section className="py-20 px-4">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-12">
           <Eye className="w-16 h-16 text-primary mx-auto mb-6" />
@@ -40,14 +37,8 @@ const ProblemSection = () => {
             </p>
             
             <div className="mt-8 p-6 bg-primary/10 border border-primary/30 rounded-xl">
-              <p className="text-left leading-relaxed">
-                Agora imagina se ele clica e encontra uma página que parece de empresa grande, 
-                com tudo no lugar: nome, serviços, agendamento automático, seus contatos, 
-                e o visual perfeito no celular.
-              </p>
-              <p className="text-primary font-bold text-xl mt-4">
-                Você vira opção na hora.
-              </p>
+              <p className="text-left leading-relaxed">Agora imagina se ele clica e encontra uma página que transborda confiança, com tudo no lugar: nome, serviços, agendamento automático, seus contatos, portifólio videos e o visual perfeito no celular.</p>
+              <p className="text-primary font-bold text-xl mt-4">Você vira opção na hora!</p>
             </div>
           </div>
         </div>
@@ -67,8 +58,6 @@ const ProblemSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ProblemSection;
